@@ -8,7 +8,7 @@
 
 //Use the taskManager to display the list of tasks.
 
-let x = (function taskManger (){
+taskManager = (function(){
     let task = []
     function addTask (description){
         const add = task.push(description)
@@ -23,7 +23,7 @@ let x = (function taskManger (){
 console.log (task)
 
 })();
-x.addTask("laundry")
-x.addTask("oil change")
-x.addTask("pay bill")
-x.displayTasks()
+taskManager.addTask("laundry")
+taskManager.addTask("oil change")
+taskManager.addTask("pay bill")
+taskManager.displayTasks()
