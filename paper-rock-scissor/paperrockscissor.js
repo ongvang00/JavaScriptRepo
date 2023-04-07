@@ -99,15 +99,13 @@ console.log(playGame(PlayerOne, PlayerTwo,playUntill))
 
 const PlayerThree = {
     Name:"Jack",
-    getHandmethod: getHand,
-    wins: 0,}
+    getHandmethod: getHand}
     
 const PlayerFour = {
     Name:"Nelson", 
-    getHandmethod: getHand,
-    wins: 0,}
+    getHandmethod: getHand}
 
-function playTournament (PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUntill) {
+function playTournament (PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUntill=1) {
     console.log("playTournament");
 
     PlayerOne.wins = 0;
@@ -123,7 +121,7 @@ function playTournament (PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUnti
 
     Winner = playGame (FinalPlayer1, FinalPlayer1, 1);
 
-    console.log ("The winner of the tournment is :", winner.Name);
+    console.log ("The winner of the tournament is :", winner.Name);
 }
 
-playTournament(PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUntill)
+console.log (playTournament(PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUntill))
