@@ -29,15 +29,18 @@ Person.prototype.family = [];
 //take a look at the instanceofoperator. Make sure that your family array does not include duplicates! 
 //This method should return the length of the family array.
 Person.prototype.addToFamily = function (familyMembers) { 
-this.family.push(familyMembers)
-console.log (this.family)
-console.log (this.family.length)
-return this.family.length
+    if (familyMembers instanceof Person && !this.family.includes(familyMembers))
+    {
+        this.family.push(familyMembers) }
+    
+        return this.family.length
 
 }
 
 const Molly = new Person ('Molly', 'Smith', 'Green', '7', ['noodles', 'chicken'])
-const sister = new Person ('Sarah', 'Smith', 'blue', '9', 'pizza')
+const Sarah = new Person ('Sarah', 'Smith', 'blue', '9', 'pizza')
 
-Molly.addToFamily(sister)
-console.log (Molly instanceof Person)
+Molly.addToFamily(Molly)
+Sarah.addToFamily(Sarah)
+console.log ("family array:",  Molly.family)
+console.log (Molly.addToFamily())
