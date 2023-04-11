@@ -40,3 +40,4 @@ const Molly = new Person ('Molly', 'Smith', 'Green', '7', ['noodles', 'chicken']
 const sister = new Person ('Sarah', 'Smith', 'blue', '9', 'pizza')
 
 Molly.addToFamily(sister)
+console.log (Molly instanceof Person)
