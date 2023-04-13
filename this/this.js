@@ -14,6 +14,8 @@ const photoSlideShow = {
             return "End of Slideshow"; 
         }
     },
+
+//A prevPhoto() function that does the same thing, but backwards.
     prevPhoto: function(){
 
         if (this.currentPhotoIndex === 0) {
@@ -22,6 +24,7 @@ const photoSlideShow = {
             return this.photoList[(this.currentPhotoIndex) - 1];
         }
     },
+//A function getCurrentPhoto() that returns the current photo from the list.
     getCurrentPhoto: function () {
         return this.photoList[this.currentPhotoIndex];
     },
