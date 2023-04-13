@@ -7,8 +7,6 @@ const photoSlideShow = {
     currentPhotoIndex: 0,
 //A nextPhoto() function that moves currentPhotoIndex to the next index if there is one, and: 4. logs the current photo name. 4. Otherwise, log "End of slideshow";  
     nextPhoto: function(){
-        // let photoListLength = this.photoList.length;
-        // let currentPhotoIndex = this.currentPhotoIndex;
 
         if (this.currentPhotoIndex < this.photoList.length - 1){
             return this.photoList[this.currentPhotoIndex+1];
@@ -17,7 +15,7 @@ const photoSlideShow = {
         }
     },
     prevPhoto: function(){
-        // let photoListLength = this.photoList.length; 
+
         if (this.currentPhotoIndex === 0) {
             return "Beginning of the Slideshow"; 
         } else {
