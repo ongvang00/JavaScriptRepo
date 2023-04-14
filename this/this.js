@@ -9,7 +9,8 @@ const photoSlideShow = {
     nextPhoto: function(){
 
         if (this.currentPhotoIndex < this.photoList.length - 1){
-            return this.photoList[this.currentPhotoIndex+1];
+            this.currentPhotoIndex++;
+            return this.photoList[this.currentPhotoIndex];
         } else if (this.currentPhotoIndex == this.photoList.length- 1){
             return "End of Slideshow"; 
         }
@@ -21,7 +22,8 @@ const photoSlideShow = {
         if (this.currentPhotoIndex === 0) {
             return "Beginning of the Slideshow"; 
         } else {
-            return this.photoList[(this.currentPhotoIndex) - 1];
+            this.currentPhotoIndex--; 
+            return this.photoList[(this.currentPhotoIndex)];
         }
     },
 //A function getCurrentPhoto() that returns the current photo from the list.
