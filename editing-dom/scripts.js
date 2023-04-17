@@ -27,8 +27,7 @@ newList.map(item => {
   list.append(newlist1);
 });
 
-
-
 //Add the class 'important' to the almonds item.
 
-cartlist[1].className= "important"
+
+cartList[1].className= "important"
