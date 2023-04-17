@@ -31,6 +31,6 @@ const div = highlight.parentElement.parentElement;
 console.log(div);
 
 //Get all the sections that contain an H2 (using a single statement);
-const h2Section = document.getElementsByTagName('h2')
+const h2Section = document.querySelectorAll('section:has(h2)');
 
 console.log(h2Section);
