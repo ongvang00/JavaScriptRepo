@@ -1,6 +1,6 @@
 //Get the header element
 
-const header = document.getElementsByTagName('header');
+const header = document.getElementsByTagName('header')[0];
 console.log (header);
 
 //Get all the section elements
