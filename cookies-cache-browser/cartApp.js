@@ -1,6 +1,6 @@
 //Create a function called initializeCart that checks if there's a cart in localStorage;
 function initializeCart(){
-    if (localStorage.getItem('cart') = null) {; 
+    if (localStorage.getItem('cart') === null) {; 
         // if not, it initializes an empty cart and stores it in localStorage.
     localStorage.setItem ('cart', JSON.stringify([]));
     }
@@ -31,7 +31,7 @@ function removeItem(id){
 function displayCart(){
     const cart = JSON.parse (localStorage.getItem('cart'));
 //logs the cart contents to the console.
-    console.log(cart)
+    console.log(cart);
 }
 
 //Create event listeners for the add item form 
