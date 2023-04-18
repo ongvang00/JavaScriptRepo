@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 40px;
+  }
+
+  .game-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .player-container {
+    margin: 0 20px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #2e8b57;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #228b22;
+  }

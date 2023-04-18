@@ -10,17 +10,18 @@ const Hand= ['rock', 'paper', 'scissors'];
 
 
 
+
+function getHand(){
+    return Hand[parseInt(Math.random()*10)%3];
+}
+console.log(getHand)
+
 const PlayerOne= {
     Name:"Nick" , 
     getHandmethod: getHand}
 const PlayerTwo = {
     Name:"Molly",
     getHandmethod: getHand}
-
-function getHand(){
-    return Hand[parseInt(Math.random()*10)%3];
-}
-console.log(getHand)
 
 //Define a function called playRound() that
 //Takes two player objects as arguments
@@ -33,6 +34,7 @@ console.log(getHand)
 function playRound(PlayerOne,PlayerTwo){
     let player1 = PlayerOne.getHandmethod();
     let player2 = PlayerTwo.getHandmethod();
+
 
     console.log(PlayerOne.Name,player1 );
     console.log(PlayerTwo.Name,player2);
@@ -105,23 +107,23 @@ const PlayerFour = {
     Name:"Nelson", 
     getHandmethod: getHand}
 
-function playTournament (PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUntill=1) {
+function playTournament (PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUntill) {
     console.log("playTournament");
 
-    PlayerOne.wins = 0;
-    PlayerTwo.wins = 0;
-    PlayerThree.wins = 0;
-    PlayerFour.wins = 0;
+    let PlayerOneWins = 0;
+    let PlayerTwoWins = 0;
+    let PlayerThreeWins = 0;
+    let PlayerFourWins = 0;
 
     FinalPlayer1 = playGame (PlayerOne, PlayerTwo, 1);
     FinalPlayer2 = playGame (PlayerThree, PlayerFour, 1);
 
-    FinalPlayer1.wins = 0;
-    FinalPlayer2.wins = 0;
+    let FinalPlayer1Wins = 0;
+    let FinalPlayer2Wins = 0;
 
     Winner = playGame (FinalPlayer1, FinalPlayer1, 1);
 
-    console.log ("The winner of the tournament is :", winner.Name);
+    console.log ("The winner of the tournament is :", Winner.Name);
 }
 
 console.log (playTournament(PlayerOne, PlayerTwo, PlayerThree, PlayerFour, playUntill))
