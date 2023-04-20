@@ -2,7 +2,7 @@
 //Get all posts 
 
 const displayData = document.getElementById("data");
-const getAllPostBTN = document.getElementById("getAllPost")
+const getAllPostBTN = document.getElementById("getAllPost");
 const loadAllData = (allData) => {
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
@@ -15,11 +15,11 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         }
     })
 }
+
     getAllPostBTN.addEventListener('click', () => {
             loadAllData();
 
     })
-
 
 // Get post with id of 10
 
@@ -65,4 +65,48 @@ createNewBTN.addEventListener('click', () => {
     newPost();
 })
 
-//Replace the post with id of 12 and render the responseJSON
+//Update the title of post with id of 12 and render responseJSON
+
+    fetch('https://jsonplaceholder.typicode.com/posts/12', {
+        method: 'PUT',
+        body: JSON.stringify({
+          id: 1,
+          title: 'this is me updating the title',
+          body: 'bar',
+          userId: 1,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+const updatePost = (replaceData) => {
+    fetch('https://jsonplaceholder.typicode.com/posts?id=12')
+      .then(response => response.json())
+      .then((responseJson) => {
+          for (let { body } of responseJson) {
+              console.log (body);
+              const dataBody = document.createElement('p');
+              dataBody.innerText = body;
+              displayData.append(dataBody);
+          }
+      })
+}
+const updateBTN = document.getElementById("updatePost")
+  updateBTN.addEventListener('click', () => {
+    updatePost();
+})
+
+//Delete the post with id of 12 and render a success message
+const deletePost = (deleteData) => {
+fetch('https://jsonplaceholder.typicode.com/posts?id=12', {
+  method: 'DELETE',
+});
+}
+const deleteBTN = document.getElementById("deletePost")
+function displaySuccess() {
+    const displayData = document.getElementById("data");
+    const newItem = document.createElement('p');
+    newItem.innerText = "successful!!!!!!"
+    displayData.append(newItem)
+  }
+  deleteBTN.addEventListener('click', displaySuccess)
