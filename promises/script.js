@@ -1,17 +1,17 @@
 //Create an array of user objects called users. Each user object should have an id, name, and email property.
 const users = 
 [{
-    id: '1',
+    id: 1,
     name: 'molly',
     email: 'molly@gmail.com',
 },
 {
-    id: '2',
+    id: 2,
     name: 'nick',
     email: 'nick@gmail.com',
 },
 {
-    id: '3',
+    id: 3,
     name: 'jack',
     email: 'jack@gmail.com',
 }]
@@ -21,30 +21,36 @@ const users =
 // //Otherwise, it should reject with an error message. 
 // //Simulate an asynchronous request by using setTimeout() to delay the resolution or rejection of the promise by 1 second.
 
-function fetchUserById(userId) {
+function fetchUserById(userID) {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (userId == users.id) {
-          resolve("ID Match");
+      setTimeout(function() {
+        const user = users.find(function(user) {
+          return user.id === userID;});
+        if (user) {
+          resolve(user)
         } else {
-          reject("Error- ID not found");
+          reject("Error- User ID: " + userID + " not found.");
         }
       }, 1000);
     });
   }
 
   console.log("Starting fetch");
-
+//Use the fetchUserById function to fetch the user with ID 1. Log the user object if the promise is fulfilled and the error message if the promise is rejected
 fetchUserById(1)
-.then((message) => {
-    console.log ("resolved:", message);
-})
-.catch((message) => {
-    console.log("reject:", message);
-});
-
-console.log("Fetch Initiated");
-//Use the fetchUserById function to fetch the user with ID 1. Log the user object if the promise is fulfilled and the error message if the promise is rejected.
-
-
+    .then((user) => {
+      console.log("User Found: ", user);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+    console.log("Fetch Initiated");
 //Next, chain another fetchUserById call to fetch the user with ID 2. Log the user object if the promise is fulfilled and the error message if the promise is rejected.
+
+fetchUserById(2)
+    .then(function(user) {
+      console.log("User Found: ", user);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
