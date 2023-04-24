@@ -47,4 +47,4 @@ console.log("const firstEventSqaure:", secondEvenSquare)
 // //Use a template literal to log the original numbers array, the squares array, the evenSquares array, and the extracted even squares.
 console.log(`${numbers}`)
 console.log (`${squares}`)
-// console.log (`${evenSquares}`)
+console.log (`${evenSquares}`)
