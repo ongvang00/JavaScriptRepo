@@ -35,7 +35,7 @@ let evenSquares = squares.filter(function(number) {
     return number % 2 === 0;
 });
 
-console.log ("evenSquares array results:", evenSquares)
+console.log ("evenSquares Array Results:", evenSquares)
 
 
 //Use destructuring assignment to extract the first and second elements of the evenSquares array into constants firstEvenSquare and secondEvenSquare.
@@ -45,6 +45,6 @@ const [, secondEvenSquare] = evenSquares
 console.log("const firstEventSqaure:", firstEvenSquare)
 console.log("const firstEventSqaure:", secondEvenSquare)
 // //Use a template literal to log the original numbers array, the squares array, the evenSquares array, and the extracted even squares.
-console.log(`${numbers}`)
-console.log (`${squares}`)
-console.log (`${evenSquares}`)
+console.log(`template literal numbers array: ${numbers}`)
+console.log (`template literal square array: ${squares}`)
+console.log (`template literal evenSquare array: ${evenSquares}`)
