@@ -28,7 +28,7 @@ const loadId10Data = (id10Data) => {
 fetch('https://jsonplaceholder.typicode.com/posts?id=10')
     .then(response => response.json())
     .then((responseJson) => {
-        for (let { body } of responseJson) {
+        for (let { body } of responseJson) { //display everything!!!!!!!
             console.log (body);
             const dataBody = document.createElement('p');
             dataBody.innerText = body;
@@ -39,7 +39,7 @@ fetch('https://jsonplaceholder.typicode.com/posts?id=10')
     ID10BTN.addEventListener('click', () => {
             loadId10Data();
 
-    })
+    }) //clear post after each click!!!!!!!
 
 //Create a new post and log the id generated for it by the server
 
@@ -64,6 +64,15 @@ const createNewBTN = document.getElementById("createNew")
 createNewBTN.addEventListener('click', () => {
     newPost();
 })
+//Replace the post with id of 12 and render the responseJSON!!!!!
+
+
+
+
+
+
+
+
 
 //Update the title of post with id of 12 and render responseJSON
 

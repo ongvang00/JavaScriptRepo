@@ -2,7 +2,8 @@
 console.log ('my application just ran');
 
 //Require or import the 'moment' modules in your application.
-var moment = require();
+const moment = require('moment');
+const myMoment = new moment
 
 //Use 'moment' to output the timestamp for when the response arrives using the format h:mm:ss a.
 var myDate = new Date ();

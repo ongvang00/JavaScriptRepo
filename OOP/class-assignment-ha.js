@@ -20,7 +20,7 @@ class Job { //Create a class of `Job` with the following properties:
 
 
 //You must also extend the class into something of your choice. It must be relevant and make sense as the properties will have to be unique enough.
-class softwareEngineer extends Job {
+class Jobinformation extends Job {
     getName(){
         super.getName();
         console.log ("Job Name: Software Engineer")
@@ -29,29 +29,40 @@ class softwareEngineer extends Job {
         super.getFieldAndIndustry();
         console.log ("Field/Industry: Computer Science");
     }
+//     constructor(name, industry, degree, field, salary, location) {
+//         super (name, industry, degree, field, salary);
+//         this.location = location;
+//     }
+//     show () {
+//         return this.name + "position is located in" + this.location; 
+//     }
+
 }
 
-//create three different instances of the Job class
-//console log any 2 methods for each instance of the class
+newjob = new Jobinformation ('software engineer', 'computer science', 'BS', 'computer science', '80000', 'charlotte')
+// create three different instances of the Job class
+// console log any 2 methods for each instance of the class
 
 
-const nurse = new Job ('Pediatric Nurse', 'Medical', 'BSN', 'Medical', '70000');
-console.log (nurse.getFieldAndIndustry());
-console. log (nurse.getName ())
+// const nurse = new Job ('Pediatric Nurse', 'Medical', 'BSN', 'Medical', '70000');
+// console.log (nurse.getFieldAndIndustry());
+// console. log (nurse.getName ())
 
-const teacher = new Job ('Highschool Teacher', 'Education', 'BA', 'Education', '50000');
-console.log (teacher.getFieldAndIndustry ());
-console.log (teacher.getName())
+// const teacher = new Job ('Highschool Teacher', 'Education', 'BA', 'Education', '50000');
+// console.log (teacher.getFieldAndIndustry ());
+// console.log (teacher.getName())
 
-const assembler = new Job ('Sandwich Assembler', 'Manufacture', 'diploma', 'Manufacture', '20000');
-console.log(assembler.getName());
-console.log (assembler.getFieldAndIndustry());
+// const assembler = new Job ('Sandwich Assembler', 'Manufacture', 'diploma', 'Manufacture', '20000');
+// console.log(assembler.getName());
+// console.log (assembler.getFieldAndIndustry());
 
 
 
-//create an instance of the extended class
-const softwareEngineer1 = new softwareEngineer ();
+// //create an instance of the extended class
+newjob = new Jobinformation ('software engineer', 'computer science', 'BS', 'computer science', '80000', 'charlotte')
 
-//console log 2 new methods from the extended class
-softwareEngineer1.getName();
-softwareEngineer1.getFieldAndIndustry();
+// //console log 2 new methods from the extended class
+Jobinformation.getName();
+Jobinformation.getFieldAndIndustry();
+
+// console.log (newjob)

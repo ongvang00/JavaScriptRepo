@@ -46,7 +46,7 @@ console.log(appData.inbox);
 //Get the text of the second email in the visible list
 console.log(appData.inbox[1].message);
 
-Mark an email as sent
+//Mark an email as sent
 
 let sentemail = appData.draft.pop()
 console.log(sentemail)
@@ -54,7 +54,7 @@ console.log(sentemail)
 appData.outbox.push(sentemail)
 console.log(appData.outbox)
 
-Add a draft email to the drafts mailbox
+// Add a draft email to the drafts mailbox
 appData.drafts={
     to: "hello@gmail.com",
     status: "draft", 

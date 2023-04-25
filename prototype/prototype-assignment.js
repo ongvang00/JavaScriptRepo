@@ -28,10 +28,10 @@ Person.prototype.family = [];
 //array. To make sure that the object you are adding is an object constructed from the Person constructor - 
 //take a look at the instanceofoperator. Make sure that your family array does not include duplicates! 
 //This method should return the length of the family array.
-Person.prototype.addToFamily = function (familyMembers) { 
-    if (familyMembers instanceof Person && !this.family.includes(familyMembers))
+Person.prototype.addToFamily = function (familyMember) { 
+    if (familyMember instanceof Person && !this.family.includes(familyMember))
     {
-        this.family.push(familyMembers) }
+        this.family.push(familyMember) }
     
         return this.family.length
 
@@ -44,3 +44,4 @@ Molly.addToFamily(Molly)
 Sarah.addToFamily(Sarah)
 console.log ("family array:",  Molly.family)
 console.log (Molly.addToFamily())
+
