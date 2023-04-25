@@ -8,5 +8,3 @@ var moment = require();
 var myDate = new Date ();
 var timeStamp = moment(myDate).format('h:mm:ss a');
 console.log (timeStamp);
-
-
